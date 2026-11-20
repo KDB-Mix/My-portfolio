@@ -10,7 +10,7 @@ ageContainer.innerHTML = `Age: ${currentYear-2010} years ${currentMonth > 0 ? `$
 icon_button.addEventListener("click", function() {
     thought_bubble.style.animation = "scale-out .5s ease-in forwards"
     if (icon.src.endsWith("icon.svg")){
-        icon.src = "src/assets/face.svg"
+        icon.src = "src/assets/face.jpg"
     }else{
         icon.src = "src/assets/icon.svg"
     }
