@@ -1,6 +1,7 @@
 const icon_button = document.querySelector("#icon-button")
 const icon = document.querySelector("#icon")
 const thought_bubble = document.querySelector("header .thought-bubble")
+const creations_ul = document.querySelector("#creations ul")
 
 icon_button.addEventListener("click", function() {
     thought_bubble.style.animation = "scale-out .5s ease-in forwards"
@@ -10,3 +11,13 @@ icon_button.addEventListener("click", function() {
         icon.src = "src/assets/icon.svg"
     }
 });
+fetch("https://raw.githubusercontent.com/KDB-Mix/kdb-mix.github.io/refs/heads/master/projects.json").then(
+    response => response.json()
+).then(
+    data => {
+        for (let index = 0; index < Object.keys(data).length; index++){
+            const title = Object.keys(data)[index];
+            creations_ul.innerHTML += `<li><a href="${data[title]["link"]["url"]}" target="_blank">${title}</a></li>`
+        }
+    }
+)

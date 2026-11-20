@@ -1,56 +1,88 @@
 body{
     margin: 0;
     padding: 0;
+    font-size: 1.2rem;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-image: linear-gradient(black, black, #333, #555, white);
+    color: white;
+    padding: 50px;
+    text-align: center;
 }
 #icon-button{
     border: none;
     background: none;
     border-radius: 50%;
-    z-index: 1;
 }
 #icon{
+    border: 3px dotted whitesmoke;
+    border-radius: 50%;
     width: 100px;
+    height: 100%;
 }
 .thought-bubble{
-    position: absolute;
+    position: relative;
     max-width: 300px;
     width: fit-content;
-    border: 2px solid black;
+    border: 2px solid #333;
     border-radius: 50%;
     padding: 10px 20px;
-    left: 70px;
-    top: 100px;
-    z-index: -1;
+    left: 0px;
+    top: 0px;
+    background-color: aliceblue;
+    color: black;
 }
 .thought-bubble::after{
     content: "";
     position: absolute;
-    top: -30px;
-    left: 50px;
+    bottom: -20px;
+    left: 20px;
     width: 20px;
     height: 20px;
     border: 2px solid #333;
     border-radius: 50%;
     transform: translateX(-50%);
+    background-color: aliceblue;
 }
 .thought-bubble::before{
     content: "";
     position: absolute;
-    top: -40px;
-    left: 30px;
+    bottom: -40px;
+    left: 25px;
     width: 10px;
     height: 10px;
     border: 2px solid #333;
     border-radius: 50%;
     transform: translateX(-50%);
+    background-color: aliceblue;
+}
+#about{
+    text-shadow: 0 0 5px black;
+}
+main{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main>*{
+    margin: 20px;
+    width: 200px;
+}
+main a{
+    color: #111;
 }
 @keyframes scale-out {
     50%{
-        translate: 10px 10px;
+        translate: -10px -10px;
         scale: 1.05;
     }
     99%{
-        translate: -100px -100px;
+        translate: 50px 100px;
         scale: .2;
     }
     100%{
