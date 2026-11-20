@@ -1,4 +1,5 @@
 body{
+    font-family: "Changa One", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
@@ -88,6 +89,12 @@ footer{
 footer a{
     color: aliceblue;
 }
+#yt-subs{
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+}
+
 @media (max-width: 570px){
     footer{
         flex-direction: column;
