@@ -76,6 +76,27 @@ main>*{
 main a{
     color: #111;
 }
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    color: white;
+    background-color: #111;
+    align-items: center;
+}
+footer a{
+    color: aliceblue;
+}
+@media (max-width: 570px){
+    footer{
+        flex-direction: column;
+        justify-content: baseline;
+    }
+    footer p{
+        text-align: center;
+    }
+}
 @keyframes scale-out {
     50%{
         translate: -10px -10px;

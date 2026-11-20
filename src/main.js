@@ -2,7 +2,11 @@ const icon_button = document.querySelector("#icon-button")
 const icon = document.querySelector("#icon")
 const thought_bubble = document.querySelector("header .thought-bubble")
 const creations_ul = document.querySelector("#creations ul")
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth();
+const ageContainer = document.querySelector("#age");
 
+ageContainer.innerHTML = `Age: ${currentYear-2010} years ${currentMonth > 0 ? `${currentMonth} Months`:``}`
 icon_button.addEventListener("click", function() {
     thought_bubble.style.animation = "scale-out .5s ease-in forwards"
     if (icon.src.endsWith("icon.svg")){
