@@ -5,6 +5,8 @@ const creations_ul = document.querySelector("#creations ul")
 const currentYear = new Date().getFullYear();
 const currentMonth = new Date().getMonth();
 const ageContainer = document.querySelector("#age");
+const img = new Image();
+img.src = "src/assets/face.jpg";
 
 ageContainer.innerHTML = `Age: ${currentYear-2010} years ${currentMonth > 0 ? `${currentMonth} Months`:``}`
 icon_button.addEventListener("click", function() {
